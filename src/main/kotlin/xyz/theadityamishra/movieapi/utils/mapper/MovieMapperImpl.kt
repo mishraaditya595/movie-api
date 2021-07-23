@@ -1,9 +1,12 @@
 package xyz.theadityamishra.movieapi.utils.mapper
 
+import org.springframework.stereotype.Component
+import org.springframework.stereotype.Service
 import xyz.theadityamishra.movieapi.dto.MovieDTO
 import xyz.theadityamishra.movieapi.entity.Movie
 
-class MovieMapperImpl<D, E> : Mapper<MovieDTO, Movie>
+@Service
+class MovieMapperImpl : Mapper<MovieDTO, Movie>
 {
 
     override fun fromEntity(entity: Movie) = MovieDTO(
